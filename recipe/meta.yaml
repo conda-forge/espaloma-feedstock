@@ -1,5 +1,5 @@
 {% set name = "espaloma" %}
-{% set version = "0.2.2" %}
+{% set version = "0.2.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/choderalab/espaloma/archive/{{ version }}.tar.gz
-  sha256: e9d84cd961e61d21e85c6444f55aede922d7da4a7553484826f020d76ed5837b
+  sha256: e538f41ed3799d402b770b42429ab2d976bce41ed0dcc93099821dfaaf2bef3b
 
 build:
   noarch: python
