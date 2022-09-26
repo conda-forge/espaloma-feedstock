@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -22,7 +22,7 @@ requirements:
     - matplotlib-base
     - numpy
     - openff-forcefields
-    - openff-toolkit
+    - openff-toolkit >=0.9.0,<0.11.0
     - openmm
     - openmmforcefields
     - python >=3.6
@@ -49,3 +49,6 @@ about:
 extra:
   recipe-maintainers:
     - mikemhenry
+    - yuanqing-wang
+    - ijpulidos
+    - jchodera
