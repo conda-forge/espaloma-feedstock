@@ -1,5 +1,5 @@
 {% set name = "espaloma" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/choderalab/espaloma/archive/{{ version }}.tar.gz
-  sha256: e538f41ed3799d402b770b42429ab2d976bce41ed0dcc93099821dfaaf2bef3b
+  sha256: 1a1a6ff518c54104bae175bcbddf6f9b316d37b739539dc30747d00a707d51a2
 
 build:
   noarch: python
@@ -24,7 +24,7 @@ requirements:
     - openff-forcefields
     - openff-toolkit >=0.9.0,<0.11.0
     - openmm
-    - openmmforcefields
+    - openmmforcefields >=0.11.2
     - python >=3.6
     - pytorch
     - qcportal >=0.15.0
