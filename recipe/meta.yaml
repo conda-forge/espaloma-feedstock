@@ -1,5 +1,5 @@
 {% set name = "espaloma" %}
-{% set version = "0.2.3" %}
+{% set version = "0.2.4" %}
 
 package:
   name: {{ name|lower }}
@@ -24,7 +24,7 @@ requirements:
     - openff-forcefields
     - openff-toolkit
     - openmm
-    - openmmforcefields
+    - openmmforcefields >=0.11.2
     - python >=3.6
     - pytorch
     - qcportal >=0.15.0
