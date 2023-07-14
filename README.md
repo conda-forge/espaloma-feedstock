@@ -1,11 +1,11 @@
-About espaloma
-==============
+About espaloma-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/espaloma-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/choderalab/espaloma
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/espaloma-feedstock/blob/main/LICENSE.txt)
 
 Summary: Extensible Surrogate Potential of Ab initio Learned and Optimized by Message-passing Algorithm 🍹 https://arxiv.org/abs/2010.01196
 
@@ -143,5 +143,8 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@ijpulidos](https://github.com/ijpulidos/)
+* [@jchodera](https://github.com/jchodera/)
 * [@mikemhenry](https://github.com/mikemhenry/)
+* [@yuanqing-wang](https://github.com/yuanqing-wang/)
 
