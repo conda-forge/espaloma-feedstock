@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
@@ -27,7 +27,7 @@ requirements:
     - openmmforcefields >=0.11.2
     - python >=3.9
     - pytorch
-    - qcportal >=0.15.0
+    - qcportal >=0.15.0,<0.50.0a0
     - scipy
     - smirnoff99Frosst
     - tqdm
