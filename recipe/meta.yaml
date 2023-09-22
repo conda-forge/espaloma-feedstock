@@ -1,5 +1,5 @@
 {% set name = "espaloma" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,40 +7,43 @@ package:
 
 source:
   url: https://github.com/choderalab/espaloma/archive/{{ version }}.tar.gz
-  sha256: 6f468793fb82de91185e77e3205b1889e7365b98f48a362344c3f0fddac29aa5
+  sha256: 8f3f2481d949aa7f59759540815d4e7de1d6ff168efeb3ce818ea2b155d2428f
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
     - pip
     - python >=3.9
   run:
+    - dgl =1.1.2
     - matplotlib-base
     - numpy
     - openff-forcefields
     - openff-toolkit >=0.12.0
     - openmm
     - openmmforcefields >=0.11.2
+    - pint =0.21
+    - pydantic <2
     - python >=3.9
     - pytorch
     - qcportal >=0.15.0,<0.50.0a0
     - scipy
     - smirnoff99Frosst
     - tqdm
-    - pydantic <2
-    - pint =0.21
 
 test:
   imports:
     - espaloma
   commands:
     - pip check
+    - pytest --pyargs espaloma
   requires:
     - pip
+    - pytest
 
 about:
   home: https://github.com/choderalab/espaloma
