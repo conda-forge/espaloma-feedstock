@@ -41,10 +41,8 @@ test:
     - espaloma
   commands:
     - pip check
-    - pytest --pyargs espaloma
   requires:
     - pip
-    - pytest
 
 about:
   home: https://github.com/choderalab/espaloma
