@@ -35,8 +35,12 @@ outputs:
         - scipy
         - tqdm
     test:
+      files:
+        - test_readme.py
       imports:
         - espaloma
+      commands:
+        - python test_readme.py
 
   - name: espaloma
     build:
