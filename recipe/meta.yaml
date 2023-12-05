@@ -10,39 +10,54 @@ source:
   sha256: 8f3f2481d949aa7f59759540815d4e7de1d6ff168efeb3ce818ea2b155d2428f
 
 build:
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
   number: 1
 
-requirements:
-  host:
-    - pip
-    - python =3.11
-  run:
-    - matplotlib-base
-    - numpy
-    - openff-forcefields
-    - openff-toolkit >=0.12.0
-    - openff-units
-    - openmm
-    - openmmforcefields >=0.11.2
-    - pydantic <2
-    - python >=3.9
-    - pytorch
-    - qcportal >=0.15.0,<0.50.0a0
-    - scipy
-    - smirnoff99Frosst
-    - tqdm
-  run_constrained:
-    - dgl =1.1.2
+outputs:
+  - name: espaloma-base
+    script: build_base.sh
+    build:
+      noarch: python
+    requirements:
+      host:
+        - pip
+        - python =3.11
+      run:
+        - python >=3.9
+        - numpy
+        - openff-forcefields
+        - openff-toolkit >=0.12.0
+        - openff-units
+        - openmm
+        - openmmforcefields >=0.11.2
+        - pydantic <2
+        - pytorch
+        - qcportal =0.15
+        - scipy
+        - tqdm
+    test:
+      imports:
+        - espaloma
 
-test:
-  imports:
-    - espaloma
-  commands:
-    - pip check
-  requires:
-    - pip
+  - name: espaloma
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python >=3.9
+      run:
+        - python >=3.9
+        - matplotlib-base
+        - dgl =1.1.2
+        - {{ pin_subpackage('espaloma-base', exact=True) }}
+    test:
+      imports:
+        - espaloma
+      commands:
+        - pip check
+        - pytest --pyargs espaloma
+      requires:
+        - pip
+        - pytest
 
 about:
   home: https://github.com/choderalab/espaloma
