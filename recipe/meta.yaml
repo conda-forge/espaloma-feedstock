@@ -12,14 +12,14 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
     - python >=3.9
   run:
-    - dgl =1.1.2
+    - dgl =1.1.2,<=2.3.0
     - matplotlib-base
     - numpy
     - openff-forcefields
