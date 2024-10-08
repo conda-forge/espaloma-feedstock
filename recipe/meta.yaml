@@ -8,6 +8,8 @@ package:
 source:
   url: https://github.com/choderalab/espaloma/archive/{{ version }}.tar.gz
   sha256: 8f3f2481d949aa7f59759540815d4e7de1d6ff168efeb3ce818ea2b155d2428f
+  patches:
+    - patches/0000-update-versioneer.patch
 
 build:
   noarch: python
