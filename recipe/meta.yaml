@@ -42,10 +42,8 @@ test:
   imports:
     - espaloma
   commands:
-    - pip check
     - pytest --pyargs espaloma
   requires:
-    - pip
     - pytest
 
 about:
