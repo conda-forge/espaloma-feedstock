@@ -12,12 +12,12 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python {{ python_min }}
   run:
     - dgl =1.1.2
     - matplotlib-base
@@ -28,7 +28,7 @@ requirements:
     - openmm
     - openmmforcefields >=0.11.2
     - pydantic <2
-    - python >=3.9
+    - python >={{ python_min }}
     - pytorch
     - qcportal >=0.15.0,<0.50.0a0
     - scipy
@@ -44,6 +44,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
 
 about:
   home: https://github.com/choderalab/espaloma
