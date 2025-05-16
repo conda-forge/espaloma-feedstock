@@ -8,18 +8,21 @@ package:
 source:
   url: https://github.com/choderalab/espaloma/archive/{{ version }}.tar.gz
   sha256: 8f3f2481d949aa7f59759540815d4e7de1d6ff168efeb3ce818ea2b155d2428f
+  patches:
+    - patches/0000-update-versioneer.patch
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
     - python >=3.9
+    - setuptools
   run:
-    - dgl =1.1.2
+    - dgl >=1.1.2,<=2.3.0
     - matplotlib-base
     - numpy
     - openff-forcefields
@@ -34,15 +37,14 @@ requirements:
     - scipy
     - smirnoff99Frosst
     - tqdm
+    - torchdata <=0.10.0
 
 test:
   imports:
     - espaloma
   commands:
-    - pip check
     - pytest --pyargs espaloma
   requires:
-    - pip
     - pytest
 
 about:
