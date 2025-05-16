@@ -37,6 +37,7 @@ requirements:
     - scipy
     - smirnoff99Frosst
     - tqdm
+    - torchdata <=0.10.0
 
 test:
   imports:
