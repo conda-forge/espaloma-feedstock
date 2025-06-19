@@ -1,5 +1,5 @@
 {% set name = "espaloma" %}
-{% set version = "0.3.2" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/choderalab/espaloma/archive/{{ version }}.tar.gz
-  sha256: 8f3f2481d949aa7f59759540815d4e7de1d6ff168efeb3ce818ea2b155d2428f
+  sha256: f5899c05d0327f0ce531d0f4eddeb6474ec4b1f1812033584a56b1467fd5e471
   patches:
     - patches/0000-update-versioneer.patch
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
