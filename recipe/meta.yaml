@@ -32,7 +32,7 @@ requirements:
     - pytorch
     - qcportal >=0.50
     - scipy
-    - smirnoff99frosst>=1.1.0.1  # https://github.com/openforcefield/smirnoff99Frosst/issues/109 
+    - smirnoff99frosst >=1.1.0.1  # https://github.com/openforcefield/smirnoff99Frosst/issues/109 
     - tqdm
     - torchdata <0.10  # https://github.com/pytorch/data/issues/1196#issuecomment-2542528439
 
