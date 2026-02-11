@@ -1,3 +1,4 @@
+{% set python_min = '3.11' %}
 {% set name = "espaloma" %}
 {% set version = "0.4.0" %}
 
@@ -7,12 +8,12 @@ package:
 
 source:
   url: https://github.com/choderalab/espaloma/archive/{{ version }}.tar.gz
-  sha256: f5899c05d0327f0ce531d0f4eddeb6474ec4b1f1812033584a56b1467fd5e471
+  sha256: 9e5aff9e84638d2c7e34bf0da807a3935960df43c2b59c91c1a1945802991b52
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -23,6 +24,7 @@ requirements:
     - dgl >=1.1.2,<=2.3.0
     - matplotlib-base
     - numpy
+    - openff-amber-ff-ports >=2025.09.0  # https://github.com/conda-forge/openff-toolkit-feedstock/pull/117
     - openff-forcefields
     - openff-toolkit >=0.12.0
     - openff-units
@@ -32,7 +34,7 @@ requirements:
     - pytorch
     - qcportal >=0.50
     - scipy
-    - smirnoff99Frosst
+    - smirnoff99frosst >=1.1.0.1  # https://github.com/openforcefield/smirnoff99Frosst/issues/109 
     - tqdm
     - torchdata <0.10  # https://github.com/pytorch/data/issues/1196#issuecomment-2542528439
 
