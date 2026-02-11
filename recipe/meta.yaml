@@ -1,3 +1,4 @@
+{% set python_min = '3.11' %}
 {% set name = "espaloma" %}
 {% set version = "0.4.0" %}
 
