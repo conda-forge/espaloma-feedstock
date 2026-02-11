@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/choderalab/espaloma/archive/{{ version }}.tar.gz
-  sha256: f5899c05d0327f0ce531d0f4eddeb6474ec4b1f1812033584a56b1467fd5e471
+  sha256: 9e5aff9e84638d2c7e34bf0da807a3935960df43c2b59c91c1a1945802991b52
 
 build:
   noarch: python
