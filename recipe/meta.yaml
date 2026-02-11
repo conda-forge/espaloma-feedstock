@@ -23,6 +23,7 @@ requirements:
     - dgl >=1.1.2,<=2.3.0
     - matplotlib-base
     - numpy
+    - openff-amber-ff-ports >=2025.09.0  # https://github.com/conda-forge/openff-toolkit-feedstock/pull/117
     - openff-forcefields
     - openff-toolkit >=0.12.0
     - openff-units
